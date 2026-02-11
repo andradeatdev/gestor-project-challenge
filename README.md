@@ -65,3 +65,7 @@ You can use Docker Compose to run both the backend and frontend services:
    ```
 
 This will build and start both the `inventory-system-api` and `inventory-system-web` services, along with any other services defined in `compose.yaml`.
+
+## Demo
+
+A live demo of the application can be found here: [https://gestor-project-challenge-web.onrender.com](https://gestor-project-challenge-web.onrender.com)
