@@ -15,9 +15,14 @@ This repository contains a full-stack inventory system composed of a Quarkus bac
 - Java 17+
 - Maven 3.8+
 - Node.js 18+ (or Bun)
+- PostgreSQL
 - Docker and Docker Compose
 
 ### Backend (inventory-system-api)
+
+#### Database Setup
+
+The backend requires a PostgreSQL database named `inventory-system`. You can create one manually or use the `docker-compose.yaml` to spin up a PostgreSQL instance. The `inventory-system-api/src/main/resources/import.sql` file is used to pre-populate the database with initial data in development and test environments.
 
 To run the Quarkus backend:
 
