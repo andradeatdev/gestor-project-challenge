@@ -1,10 +1,9 @@
-import { Route, Routes, Navigate } from "react-router-dom"; // 1. Importe o Navigate
+import { Route, Routes, Navigate } from "react-router-dom";
 import EmptyState from "@/components/EmptyState";
 import ResourceEditor from "@/components/ResourceEditor";
 import MainLayout from "@/layouts/MainLayout";
 import MaterialsLayout from "@/layouts/MaterialsLayout";
 import ProductsLayout from "@/layouts/ProductsLayout";
-// import ErrorPage from "@/pages/ErrorPage"; // Não precisa mais se for redirecionar sempre
 
 export default function App() {
   return (

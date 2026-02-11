@@ -1,10 +1,11 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 import type { RawMaterial } from "@/store/types";
+import { VITE_API_BASE_URL } from "@/lib/consts";
 
 export const materialsApi = createApi({
   reducerPath: "materialsApi",
   baseQuery: fetchBaseQuery({
-    baseUrl: "http://localhost:8080/raw-materials",
+    baseUrl: `${VITE_API_BASE_URL}/raw-materials`,
   }),
   tagTypes: ["Material"],
   endpoints: (builder) => ({
