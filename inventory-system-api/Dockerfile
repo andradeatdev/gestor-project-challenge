@@ -3,8 +3,10 @@ WORKDIR /app
 
 COPY mvnw .
 COPY .mvn .mvn
-
 COPY pom.xml .
+
+RUN chmod +x mvnw
+
 RUN ./mvnw dependency:go-offline
 
 COPY src ./src
@@ -26,7 +28,6 @@ USER appuser
 
 WORKDIR /app
 
-# Copy the entire runnable Quarkus application from the build stage
 COPY --from=build /app/target/quarkus-app /app/quarkus-app
 
 EXPOSE 8080
