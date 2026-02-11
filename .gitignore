@@ -1,0 +1,34 @@
+# Ignore compiled files and directories
+target/
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.vsode/
+
+# Ignore IDE files
+.idea/
+.vscode/
+
+# Maven
+.m2/
+.mvn/wrapper/maven-wrapper.jar
+/inventory-system-api/.mvn/wrapper/maven-wrapper.jar
+
+# Quarkus
+.quarkus/
+quarkus-app/
+
+# Node.js
+node_modules/
+dist/
+.env
+.DS_Store
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+/inventory-system-web/node_modules
+/inventory-system-web/dist
+/inventory-system-web/bun.lock
+/inventory-system-web/.env
