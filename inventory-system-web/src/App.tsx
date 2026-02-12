@@ -4,11 +4,14 @@ import ResourceEditor from "@/components/ResourceEditor";
 import MainLayout from "@/layouts/MainLayout";
 import MaterialsLayout from "@/layouts/MaterialsLayout";
 import ProductsLayout from "@/layouts/ProductsLayout";
+import DashboardPage from "./pages/DashboardPage";
 
 export default function App() {
   return (
     <Routes>
       <Route element={<MainLayout />}>
+        <Route path="/dashboard" element={<DashboardPage />} />
+
         <Route element={<ProductsLayout />} path="/products">
           <Route
             element={<EmptyState message="Selecione um produto para editar" />}
@@ -32,7 +35,7 @@ export default function App() {
           element={<EmptyState message="Página não encontrada" />}
         />
 
-        <Route path="/" element={<Navigate to="/products" replace />} />
+        <Route path="/" element={<Navigate to="/dashboard" replace />} />
 
         <Route
           path="*"

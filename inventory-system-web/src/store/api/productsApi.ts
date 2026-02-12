@@ -1,5 +1,5 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
-import type { Product } from "@/store/types";
+import type { Product, ProductionPlan } from "@/store/types";
 import { VITE_API_BASE_URL } from "@/lib/consts";
 
 export const productsApi = createApi({
@@ -7,7 +7,7 @@ export const productsApi = createApi({
   baseQuery: fetchBaseQuery({
     baseUrl: `${VITE_API_BASE_URL}/products`,
   }),
-  tagTypes: ["Product"],
+  tagTypes: ["Product", "Plan"],
   endpoints: (builder) => ({
     addProduct: builder.mutation<void, Product>({
       query: (product) => ({
@@ -35,6 +35,12 @@ export const productsApi = createApi({
     getProducts: builder.query<Product[], void>({
       query: () => "/",
       providesTags: ["Product"],
+    }),
+    getProductionPlan: builder.query<ProductionPlan[], void>({
+      query: () => ({
+        url: `${VITE_API_BASE_URL}/planning`,
+      }),
+      providesTags: ["Plan"],
     }),
     addRawMaterialToProduct: builder.mutation<
       void,
@@ -87,4 +93,5 @@ export const {
   useRemoveRawMaterialFromProductMutation,
   useUpdateRawMaterialQuantityMutation,
   useGetMaxUnitsByProductQuery,
+  useGetProductionPlanQuery,
 } = productsApi;

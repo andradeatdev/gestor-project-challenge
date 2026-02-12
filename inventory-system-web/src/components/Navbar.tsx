@@ -1,12 +1,16 @@
-import { LogOut, Package2, Settings, User } from "lucide-react";
-import { Link, NavLink } from "react-router-dom";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import { cn } from "@/lib/utils";
+import { LogOut, Package2, Settings, User } from "lucide-react";
+import { Link, NavLink } from "react-router-dom";
 
 export default function Navbar() {
     const navItems = [
+        {
+            label: "Visão geral",
+            to: "/dashboard",
+        },
         {
             label: "Produtos",
             to: "/products",

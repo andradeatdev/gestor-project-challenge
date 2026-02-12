@@ -18,3 +18,9 @@ export type ProductRawMaterialAssociation = {
     rawMaterial: RawMaterial;
     quantity: number;
 };
+
+export type ProductionPlan = {
+    productName: string;
+    quantity: number;
+    totalValue: number;
+};
